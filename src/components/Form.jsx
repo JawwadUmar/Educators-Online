@@ -1,9 +1,9 @@
     import React, { useState } from 'react';
+    import axios from 'axios';
 
     const Form = () => {
     const [formData, setFormData] = useState({
         name: '',
-        country: '',
         phone: '',
         membership: 'basic',
         customPlan: '',
@@ -32,6 +32,33 @@
         e.preventDefault();
         // Add your form submission logic here
         console.log('Form submitted:', formData);
+        const data = {
+            Name: formData.name,
+            Phone: formData.phone,
+            Membership: formData.membership,
+            CustomPlan: formData.customPlan,
+            Email: formData.email,
+            Grade: formData.grade,
+            Subject: formData.grade
+        };
+
+        axios.post('https://sheet.best/api/sheets/8226431e-80d7-49a9-8375-cff8512e8733', data)
+        .then((response)=>{
+            //set form data to empty field
+            setFormData({
+                name: '',
+                phone: '',
+                membership: 'basic',
+                customPlan: '',
+                email: '',
+                grade: '',
+                subject: '',
+            });
+        })
+        .catch((error) =>{
+            // Handle error if needed
+            console.error('Error submitting form:', error);
+        })
     };
 
     return (
