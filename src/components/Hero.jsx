@@ -1,5 +1,6 @@
 import React from 'react'
 import Typed from 'react-typed';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -20,7 +21,12 @@ const Home = () => {
             </div>
 
             <p className='md:text-2xl text-xl font-bold text-gray-500'>Book your free class today</p>
-            <button className='bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black'>Book Now</button>
+            <Link to="/form">
+            <button className='bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black'>
+                Book Now
+            </button>
+            </Link>
+            
         </div>
 
     </div>

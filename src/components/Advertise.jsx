@@ -1,5 +1,6 @@
 import React from 'react'
 import Laptop from '../assets/mom teacing son.jpg'
+import { Link } from 'react-router-dom'
 
 const Advertise = () => {
     return (
@@ -10,8 +11,10 @@ const Advertise = () => {
                     <p className='text-[#00df9a] font-bold'>Online Sessions</p>
                     <h1 className='md: text-4xl sm:text-3xl text-2xl font-bold py-2'>Embark on a seamless learning journey from the comfort of your own space!</h1>
                     <p>Our one-on-one online tutoring sessions provide you with the ideal environment to excel without the worry of appearing less knowledgeable in front of peers. You can now learn at your own pace, asking questions anytime without hesitation.  Embrace the freedom to clarify doubts in a supportive and personalized setting. Book your one-on-one online tutoring sessions now and let the joy of learning take center stage!</p>
-    
+
+                    <Link to="/form">
                     <button className='bg-black text-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto md: mx-0 py-3 '>Get Started</button>
+                    </Link>
                 </div>
             </div>
         </div>

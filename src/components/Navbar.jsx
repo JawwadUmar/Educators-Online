@@ -11,7 +11,9 @@ const Navbar = () => {
 
   return (
     <div className='flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white'>
+      <Link to = '/'>
       <h1 className='w-full text-3xl font-bold text-[#00df9a]'>Educators Online</h1>
+      </Link>
       <ul className='hidden md:flex'>
         <li className='p-4'>
           <Link className="nav-link" to="/">Home</Link>
@@ -41,8 +43,13 @@ const Navbar = () => {
         <li className='p-4 border-b border-gray-600'>
           <Link className="nav-link" to="/about">About</Link>
         </li>
-        <li className='p-4 border-b border-gray-600'>Our Plans</li>
-        <li className='p-4 border-b border-gray-600'>Contact</li>
+        <li className='p-4 border-b border-gray-600'>
+        <Link className="nav-link" to="/plans">Our Plans</Link>
+          </li>
+
+        <li className='p-4 border-b border-gray-600'>
+        <Link className="nav-link" to="/contact">Contact</Link>
+          </li>
       </ul>
     </div>
   );

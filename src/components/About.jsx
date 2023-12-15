@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const About = () => {
   return (
@@ -14,7 +15,9 @@ const About = () => {
         </div>
 
         <p className='md:text-3xl text-xl font-bold text-gray-500 mb-2'>Book your free class today</p>
+        <Link to='/form'>
         <button className='bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black'>Book Now</button>
+        </Link>
     </div>
 
 </div>

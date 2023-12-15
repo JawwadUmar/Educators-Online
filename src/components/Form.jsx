@@ -5,10 +5,11 @@
     const [formData, setFormData] = useState({
         name: '',
         phone: '',
-        membership: 'basic',
+        membership: 'demo',
         customPlan: '',
         email: '',
         grade: '',
+        curriculum: '',
         subject: '',
     });
 
@@ -39,7 +40,8 @@
             CustomPlan: formData.customPlan,
             Email: formData.email,
             Grade: formData.grade,
-            Subject: formData.grade
+            Curriculum: formData.curriculum,
+            Subject: formData.subject
         };
 
         axios.post('https://sheet.best/api/sheets/8226431e-80d7-49a9-8375-cff8512e8733', data)
@@ -48,10 +50,11 @@
             setFormData({
                 name: '',
                 phone: '',
-                membership: 'basic',
+                membership: 'demo',
                 customPlan: '',
                 email: '',
                 grade: '',
+                curriculum: '',
                 subject: '',
             });
         })
@@ -63,7 +66,7 @@
 
     return (
         <div className='myform flex items-center justify-center h-screen'>
-        <form onSubmit={handleSubmit} className="max-w-md w-full p-8 bg-transparent rounded-lg">
+        <form onSubmit={handleSubmit} className="max-w-lg w-full p-8 bg-transparent rounded-lg">
            
                         <h2 className="text-2xl font-bold mb-6 text-[#00df9a]">Registration Form</h2>
 
@@ -101,9 +104,9 @@
                             </div>
 
                         {/* Membership Plan */}
-                        <div className="mb-4">
+                        <div className="mb-4 mt-4">
                             <label htmlFor="membership" className="block text-sm font-medium text-white">
-                            Membership Plan
+                            Membership Plan (Select 'Demo' for a free one to one live session)
                             </label>
                             <select
                             id="membership"
@@ -112,6 +115,7 @@
                             onChange={handleMembershipChange}
                             className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500"
                             >
+                            <option value="demo">Demo</option>
                             <option value="basic">Basic</option>
                             <option value="premium">Premium</option>
                             <option value="standard">Standard</option>
@@ -160,6 +164,22 @@
                             onChange={handleInputChange}
                             className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500"
                             placeholder="e.g., 10th grade"
+                            />
+                        </div>
+
+                        {/* Curriculum */}
+                        <div className="mb-4">
+                            <label htmlFor="curriculum" className="block text-sm font-medium text-white">
+                            Curriculum
+                            </label>
+                            <input
+                            type="text"
+                            id="curriculum"
+                            name="curriculum"
+                            value={formData.curriculum}
+                            onChange={handleInputChange}
+                            className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500"
+                            placeholder="e.g., CBSE"
                             />
                         </div>
 
