@@ -1,3 +1,8 @@
+
+body.modal-open {
+  overflow-y: hidden;
+}
+
 .modal {
   display: flex;
   align-items: center;
