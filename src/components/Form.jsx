@@ -1,7 +1,20 @@
     import React, { useState } from 'react';
     import axios from 'axios';
+    import Modal from './modal/Modal'
 
     const Form = () => {
+    
+    const [modalContent, setmodalContent] = useState({
+        title: '',
+        message: '',
+    })
+
+    const [isopen, setisopen] = useState(false);
+
+    const toggleModal = () =>{
+        setisopen(!isopen);
+    }
+
     const [formData, setFormData] = useState({
         name: '',
         phone: '',
@@ -57,6 +70,13 @@
                 curriculum: '',
                 subject: '',
             });
+
+            setmodalContent({
+                title: 'Form Subitted',
+                message: 'We will contact you within 2 days'
+            })
+            
+            toggleModal();
         })
         .catch((error) =>{
             // Handle error if needed
@@ -66,6 +86,7 @@
 
     return (
         <div className='myform flex items-center justify-center h-screen'>
+            <Modal open = {isopen} title = {modalContent.title} message = {modalContent.message} close = {toggleModal}/>
         <form onSubmit={handleSubmit} className="max-w-lg w-full p-8 bg-transparent rounded-lg">
            
                         <h2 className="text-2xl font-bold mb-6 text-[#00df9a]">Registration Form</h2>
@@ -83,6 +104,7 @@
                             onChange={handleInputChange}
                             className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500"
                             placeholder="John Doe"
+                            required
                             />
                         </div>
 
@@ -100,6 +122,7 @@
                                 onChange={handleInputChange}
                                 className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500"
                                 placeholder="e.g., +1 123-456-7890"
+                                required
                             />
                             </div>
 
@@ -131,6 +154,7 @@
                                 onChange={handleInputChange}
                                 className="mt-2 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500"
                                 placeholder="Enter the number of classes you want"
+                                required
                             />
                             )}
                         </div>
@@ -148,6 +172,7 @@
                             onChange={handleInputChange}
                             className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500"
                             placeholder="john@example.com"
+                            required
                             />
                         </div>
 
@@ -164,6 +189,7 @@
                             onChange={handleInputChange}
                             className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500"
                             placeholder="e.g., 10th grade"
+                            required
                             />
                         </div>
 
@@ -196,6 +222,7 @@
                             onChange={handleInputChange}
                             className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500"
                             placeholder="e.g., Mathematics"
+                            required
                             />
                         </div>
                         <button
