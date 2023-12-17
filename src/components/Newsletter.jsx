@@ -81,21 +81,20 @@ const Newsletter = () => {
         <div className='my-4'>
           <div className='flex flex-col sm:flex-row items-center justify-between w-full'>
 
-          <form ref={form} autoComplete='off' className='flex w-full' onSubmit={sendEmail} name='user_email'>
-            <input
-              className=' flex w-full rounded-md text-black my-5'
-              type='email'
-              placeholder='Enter Email'
-              name='user_email'
-              ref={form}
-              style={{ width: '250px' }}
-              required
-            />
-            <button className='bg-[#00df9a] text-black rounded-md font-medium w-[200px] ml-4 my-6 px-6 py-3'>
-              Notify Me
-            </button>
-            
-            </form>
+<form ref={form} autoComplete='off' className='flex flex-col sm:flex-row items-center justify-between w-full' onSubmit={sendEmail} name='user_email'>
+  <input
+    className='p-3 flex w-full sm:w-auto rounded-md text-black my-2 sm:my-0 sm:mr-2'
+    type='email'
+    placeholder='Enter Email'
+    name='user_email'
+    required
+  />
+
+  <button className='bg-[#00df9a] text-black rounded-md font-medium w-full sm:w-auto sm:ml-4 my-2 sm:my-0 px-6 py-3'>
+    Notify Me
+  </button> 
+</form>
+
           </div>
           <p>
             We care bout the protection of your data. Read our{' '}
@@ -109,3 +108,5 @@ const Newsletter = () => {
 };
 
 export default Newsletter;
+
+
