@@ -2,9 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+## yarn add react-scripts --dev
+
+This installs 'react-scripts' and adds it to your project's 'package.json' file.
 
 ### `yarn start`
 
