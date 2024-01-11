@@ -12,7 +12,7 @@ const Cards = () => {
           <div className='w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
               <img className='w-40 mx-auto bg-white' src={Basic} alt="/" />
               {/* <h2 className='text-2xl font-bold text-center'>10 days</h2> */}
-              <p className='text-center text-4xl font-bold'>$60</p>
+              <p className='text-center text-4xl font-bold'>$240</p>
               <div className='text-center font-medium'>
                   <p className='py-2 border-b mx-8 mt-8'>10 Classes</p>
                   <p className='py-2 border-b mx-8'>Personlised Tutor</p>
@@ -25,7 +25,7 @@ const Cards = () => {
           <div className='w-full shadow-xl bg-gray-100 flex flex-col p-4 md:my-0 my-8 rounded-lg hover:scale-105 duration-300'>
               <img className='w-40 mx-auto bg-transparent' src={Standard} alt="/" />
               {/* <h2 className='text-2xl font-bold text-center'>1 month</h2> */}
-              <p className='text-center text-4xl font-bold'>$170</p>
+              <p className='text-center text-4xl font-bold'>$700</p>
               <div className='text-center font-medium'>
                   <p className='py-2 border-b mx-8 mt-8'>30 Classes</p>
                   <p className='py-2 border-b mx-8'>Personlised Tutor</p>
@@ -38,7 +38,7 @@ const Cards = () => {
           <div className='w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
               <img className='w-40 mx-auto bg-white' src={Premium} alt="/" />
               {/* <h2 className='text-2xl font-bold text-center'>6 month</h2> */}
-              <p className='text-center text-4xl font-bold'>$1000</p>
+              <p className='text-center text-4xl font-bold'>$4000</p>
               <div className='text-center font-medium'>
                   <p className='py-2 border-b mx-8 mt-8'>180 Classes</p>
                   <p className='py-2 border-b mx-8'>Personlised Tutor</p>
