@@ -35,7 +35,7 @@ const handleFormSubmit = async(event) => {
     const name = nameRef.current.value;
     const phone = phoneRef.current.value;
     const membership = membershipRef.current.value;
-    const customPlan = customPlanRef.current ? customPlanRef.current.val : '';
+    const customPlan = customPlanRef.current ? customPlanRef.current.value : '';
     const email = emailRef.current.value;
     const grade = gradeRef.current.value;
     const curriculum = curriculumRef.current.value;
@@ -59,7 +59,7 @@ const handleFormSubmit = async(event) => {
 
     // console.log(keyValuePairs);
     var formDataString = keyValuePairs.join("&");
-    console.log(formDataString);
+    // console.log(formDataString);
 
     fetch(
         "https://script.google.com/macros/s/AKfycby8hT5MtxCiGkGa6hcmmgYSblcB4va_FCgmWTLnwjGSxc32LaPQ8l2-U9f80KsKkqXWOQ/exec",
