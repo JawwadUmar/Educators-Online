@@ -14,8 +14,15 @@ const Footer = () => {
         <h1 className='w-full text-3xl font-bold text-[#00df9a]'>Educators Online</h1>
         <p className='py-4'>Elevate your academic journey with personalized, one-on-one classes from the world's finest educators</p>
         <div className='flex justify-between md:w-[75%] my-6'>
+            
+        <a href="https://www.facebook.com/profile.php?id=61555322957387" target='_blank' rel='noopener noreferrer'>
             <FaFacebookSquare size={30} />
+            </a>
+          
+            <a href="https://www.instagram.com/educators___online/" target='_blank' rel='noopener noreferrer'>
             <FaInstagram size={30} />
+            </a>
+            
             <FaTwitterSquare size={30} />
             <FaGithubSquare size={30} />
             <FaDribbbleSquare size={30} />
