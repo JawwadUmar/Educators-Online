@@ -8,12 +8,18 @@ const Contact = () => {
 
         <div className="mb-4">
           <p className="text-[#00df9a] text-lg font-semibold">Phone:</p>
-          <p className="text-lg">(+91) 9155027072</p>
+          <a href="https://wa.me/+917879893307" target='_blank' rel='noopener noreferrer'>
+            <p className="text-lg">+91 7879893307</p>
+            </a>
+          
         </div>
 
         <div className="mb-4">
           <p className="text-[#00df9a] text-lg font-semibold">Email:</p>
+          <a href="mailto:educatorsonline7@gmail.com">
           <p className="text-lg">educatorsonline7@gmail.com</p>
+          </a>
+          
         </div>
 
         <div className="mb-4">

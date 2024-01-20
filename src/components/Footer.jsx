@@ -1,10 +1,9 @@
 import React from 'react';
 import {
-  FaDribbbleSquare,
   FaFacebookSquare,
-  FaGithubSquare,
   FaInstagram,
   FaTwitterSquare,
+  FaWhatsapp,
 } from 'react-icons/fa';
 
 const Footer = () => {
@@ -22,10 +21,16 @@ const Footer = () => {
             <a href="https://www.instagram.com/educators___online/" target='_blank' rel='noopener noreferrer'>
             <FaInstagram size={30} />
             </a>
-            
+
+            <a href="https://twitter.com/Educators__" target='_blank' rel='noopener noreferrer'>
             <FaTwitterSquare size={30} />
-            <FaGithubSquare size={30} />
-            <FaDribbbleSquare size={30} />
+            </a>
+
+            <a href="https://wa.me/+917879893307" target='_blank' rel='noopener noreferrer'>
+            <FaWhatsapp size={30} />
+            </a>
+
+            
         </div>
       </div>
       <div className='lg:col-span-2 flex justify-between mt-6'>
