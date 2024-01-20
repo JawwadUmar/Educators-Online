@@ -4,6 +4,7 @@ import {
   FaInstagram,
   FaTwitterSquare,
   FaWhatsapp,
+  FaYoutube,
 } from 'react-icons/fa';
 
 const Footer = () => {
@@ -28,6 +29,10 @@ const Footer = () => {
 
             <a href="https://wa.me/+917879893307" target='_blank' rel='noopener noreferrer'>
             <FaWhatsapp size={30} />
+            </a>
+
+            <a href="https://www.youtube.com/channel/UC3Fgqg5rSGO2fHf2az-FhrA" target='_blank' rel='noopener noreferrer'>
+            <FaYoutube size={30} />
             </a>
 
             
